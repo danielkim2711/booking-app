@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity3">
+
+    <TextView
+        android:id="@+id/tvMain3Summary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="100dp"
+        android:text="Summary"
+        android:textColor="#000"
+        android:textSize="45sp" />
+
+    <TextView
+        android:id="@+id/tvMain3LicenceNumber1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMain3Summary"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:text="Licence number:"
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvMain3LicenceNumber2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMain3Summary"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_toRightOf="@id/tvMain3LicenceNumber1"
+        android:textColor="#646464"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvMain3LastName1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMain3LicenceNumber1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Last name:"
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvMain3LastName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMain3LicenceNumber2"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/tvMain3LastName1"
+        android:textColor="#646464"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvMain3DateOfBirth1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMain3LastName1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Date of birth:"
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvMain3DateOfBirth2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMain3LastName2"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/tvMain3DateOfBirth1"
+        android:textColor="#646464"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvMain3BookingDate1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMain3DateOfBirth1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Booking Date:"
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvMain3BookingDate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMain3DateOfBirth2"
+        android:layout_marginLeft="47dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/tvMain3BookingDate1"
+        android:textColor="#646464"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvMain3AvailableTime1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMain3BookingDate1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Available Time:"
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvMain3AvailableTime2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMain3BookingDate2"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/tvMain3AvailableTime1"
+        android:textColor="#646464"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvMain3ThankYou1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMain3AvailableTime1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:text="Thank you."
+        android:textColor="#000"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/tvMain3ThankYou2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMain3ThankYou1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="Your booking is completed."
+        android:textColor="#646464"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvMain3ThankYou2"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="75dp"
+        android:backgroundTint="#6EAF64"
+        android:padding="15dp"
+        android:onClick="runActivity1"
+        android:text="Back to front"
+        android:textAllCaps="false"
+        android:textSize="20sp" />
+
+</RelativeLayout>
