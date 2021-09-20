@@ -11,19 +11,42 @@ import android.widget.EditText;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     final String SUMMARY_FILE = "summary_file.txt";
 
     private EditText edtLicenceNumber, edtLicenceVersion, edtLastName, edtDateOfBirthField;
+    public ArrayList<String> users = new ArrayList<String>();
+    User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        edtDateOfBirthField = findViewById(R.id.edtDateOfBirthField);
+    }
 
+    private void saveFile (View view){
+        FileOutputStream fos;
+        try {
+            fos = openFileOutput(SUMMARY_FILE, MODE_PRIVATE);
+            String licenceNumber = edtLicenceNumber.getText().toString().toUpperCase() + "\n";
+            String lastName = edtLastName.getText().toString() + "\n";
+            String dateOfBirth = edtDateOfBirthField.getText().toString();
+            user = new User(licenceNumber, lastName, dateOfBirth);
+            users.add(user);
+
+            fos.write(licenceNumber.getBytes());
+            fos.write(lastName.getBytes());
+            fos.write(dateOfBirth.getBytes());
+            fos.close();
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void runActivity2 (View view){
@@ -31,10 +54,6 @@ public class MainActivity extends AppCompatActivity {
         edtLicenceVersion = findViewById(R.id.edtLicenceVersion);
         edtLastName = findViewById(R.id.edtLastName);
         edtDateOfBirthField = findViewById(R.id.edtDateOfBirthField);
-
-//        Intent intent;
-//        intent = new Intent(this, MainActivity2.class);
-//        startActivity(intent);
 
         saveFile(view);
 
@@ -54,26 +73,6 @@ public class MainActivity extends AppCompatActivity {
             Intent intent;
             intent = new Intent(this, MainActivity2.class);
             startActivity(intent);
-        }
-    }
-
-    private void saveFile (View view){
-        FileOutputStream fos;
-        try {
-            fos = openFileOutput(SUMMARY_FILE, MODE_PRIVATE);
-            String licenceNumber = edtLicenceNumber.getText().toString().toUpperCase() + "\n";
-            String lastName = edtLastName.getText().toString() + "\n";
-            String dateOfBirthField = edtDateOfBirthField.getText().toString();
-
-            fos.write(licenceNumber.getBytes());
-            fos.write(lastName.getBytes());
-            fos.write(dateOfBirthField.getBytes());
-            fos.close();
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 }

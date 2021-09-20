@@ -95,6 +95,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
                     fos.write(bookingDate.getBytes());
                     fos.write(time1.getBytes());
                     fos.close();
+
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 } catch (IOException e) {
