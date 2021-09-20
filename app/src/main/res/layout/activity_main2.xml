@@ -99,13 +99,23 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/tvSlot1"
+                    android:id="@+id/tvRemainingSlot1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
                     android:layout_toRightOf="@id/tvTime1"
-                    android:text="10 Slots Remaining"
+                    android:text="10"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvSlot1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/tvRemainingSlot1"
+                    android:text="Slots Remaining"
                     android:textSize="16sp" />
 
             </RelativeLayout>

@@ -25,7 +25,8 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
     final Calendar CALENDAR = Calendar.getInstance();
 
     private ScrollView scrollView1;
-    private TextView tvDatePicker, tvAvailable, tvWarning, tvTime1, tvTime2, tvTime3, tvTime4, tvTime5, tvTime6, tvTime7, tvTime8;
+    private TextView tvDatePicker, tvAvailable, tvWarning, tvTime1, tvTime2, tvTime3, tvTime4, tvTime5, tvTime6, tvTime7, tvTime8,
+            tvRemainingSlot1;
     private Button btnDate;
     private RelativeLayout rl1, rl2, rl3, rl4, rl5, rl6, rl7, rl8;
 
@@ -80,6 +81,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         switch (view.getId()) {
             case R.id.timeSlot1:
                 tvTime1 = findViewById(R.id.tvTime1);
+                tvRemainingSlot1 = findViewById(R.id.tvRemainingSlot1);
                 rl1.setBackgroundColor(Color.parseColor("#f5f5f5"));
                 rl2.setBackgroundColor(Color.parseColor("#EBEBEB"));
                 rl3.setBackgroundColor(Color.parseColor("#EBEBEB"));
@@ -95,6 +97,8 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
                     fos.write(bookingDate.getBytes());
                     fos.write(time1.getBytes());
                     fos.close();
+                    tvRemainingSlot1.setText(String.valueOf(10 - 1));
+                    //TODO: make dynamic timeslot.
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 } catch (IOException e) {
