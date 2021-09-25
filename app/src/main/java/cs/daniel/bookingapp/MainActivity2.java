@@ -270,10 +270,13 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         int month = CALENDAR.get(Calendar.MONTH);
         int day = CALENDAR.get(Calendar.DAY_OF_MONTH);
 
+        int defaultSeconds = 1_000;
+        int sevenDaysInMilliSeconds = 518_400_000;
+
         DatePickerDialog datePickerDialog = new DatePickerDialog(this, this, year, month, day);
 
-        datePickerDialog.getDatePicker().setMinDate(CALENDAR.getTimeInMillis() - 1_000);
-        datePickerDialog.getDatePicker().setMaxDate(CALENDAR.getTimeInMillis() + 518_400_000);
+        datePickerDialog.getDatePicker().setMinDate(CALENDAR.getTimeInMillis() - defaultSeconds);
+        datePickerDialog.getDatePicker().setMaxDate(CALENDAR.getTimeInMillis() + sevenDaysInMilliSeconds);
 
         datePickerDialog.show();
     }

@@ -11,14 +11,12 @@ import android.widget.EditText;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     final String SUMMARY_FILE = "summary_file.txt";
 
     private EditText edtLicenceNumber, edtLicenceVersion, edtLastName, edtDateOfBirthField;
-    public ArrayList<String> users = new ArrayList<String>();
-    User user;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +32,6 @@ public class MainActivity extends AppCompatActivity {
             String licenceNumber = edtLicenceNumber.getText().toString().toUpperCase() + "\n";
             String lastName = edtLastName.getText().toString() + "\n";
             String dateOfBirth = edtDateOfBirthField.getText().toString();
-            user = new User(licenceNumber, lastName, dateOfBirth);
-            users.add(user);
 
             fos.write(licenceNumber.getBytes());
             fos.write(lastName.getBytes());
