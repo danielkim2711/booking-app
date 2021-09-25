@@ -36,20 +36,20 @@ public class MainActivity3 extends AppCompatActivity {
 
         try {
             fis1 = openFileInput(SUMMARY_FILE);
-            BufferedReader reader1 = new BufferedReader(new InputStreamReader(fis1));
-            String line1 = reader1.readLine();
-            String line2 = reader1.readLine();
-            String line3 = reader1.readLine();
+            BufferedReader user = new BufferedReader(new InputStreamReader(fis1));
+            String licenceNumber = user.readLine();
+            String lastName = user.readLine();
+            String dateOfBirth = user.readLine();
             fis2 = openFileInput(BOOKING_FILE);
-            BufferedReader reader2 = new BufferedReader(new InputStreamReader(fis2));
-            String line4 = reader2.readLine();
-            String line5 = reader2.readLine();
+            BufferedReader timeSlot = new BufferedReader(new InputStreamReader(fis2));
+            String bookingDate = timeSlot.readLine();
+            String availableTime = timeSlot.readLine();
 
-            tvMain3LicenceNumber2.setText(line1);
-            tvMain3LastName2.setText(line2);
-            tvMain3DateOfBirth2.setText(line3);
-            tvMain3BookingDate2.setText(line4);
-            tvMain3AvailableTime2.setText(line5);
+            tvMain3LicenceNumber2.setText(licenceNumber);
+            tvMain3LastName2.setText(lastName);
+            tvMain3DateOfBirth2.setText(dateOfBirth);
+            tvMain3BookingDate2.setText(bookingDate);
+            tvMain3AvailableTime2.setText(availableTime);
 
         } catch(FileNotFoundException e){
             Toast.makeText(this, SUMMARY_FILE +" unable to open ",
