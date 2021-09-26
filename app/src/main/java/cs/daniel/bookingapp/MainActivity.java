@@ -57,8 +57,6 @@ public class MainActivity extends AppCompatActivity {
         edtLastName = findViewById(R.id.edtLastName);
         edtDateOfBirthField = findViewById(R.id.edtDateOfBirthField);
 
-        saveFile(view);
-
         FileInputStream fis1;
 
         fis1 = openFileInput(SUMMARY_FILE);
@@ -79,11 +77,12 @@ public class MainActivity extends AppCompatActivity {
 
         else if (edtLicenceNumber.getText().toString().toUpperCase().equals(licenceNumber)) {
             Intent intent;
-            intent = new Intent(this, MainActivity3.class);
+            intent = new Intent(this, MainActivity4.class);
             startActivity(intent);
         }
 
         else {
+            saveFile(view);
             Intent intent;
             intent = new Intent(this, MainActivity2.class);
             startActivity(intent);
