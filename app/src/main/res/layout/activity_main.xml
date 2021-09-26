@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="Kia ora!"
         android:textColor="#000"
         android:textSize="30sp" />
@@ -23,7 +23,6 @@
         android:layout_below="@+id/tvWelcome"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="5dp"
         android:text="Book a driver licence test"
         android:textColor="#000"
         android:textSize="45sp" />
@@ -34,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvBooking"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:text="Driver licence number:"
         android:textColor="#000"
         android:textSize="20sp" />
@@ -45,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvLicenceNumber"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:background="#EBEBEB"
         android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
         android:hint="e.g. AB123456"
@@ -58,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/edtLicenceNumber"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:text="Driver licence version:"
         android:textColor="#000"
         android:textSize="20sp" />
@@ -69,7 +68,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvLicenceVersion"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:background="#EBEBEB"
         android:hint="e.g. 470"
         android:inputType="number"
@@ -82,7 +81,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/edtLicenceVersion"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:text="Last name:"
         android:textColor="#000"
         android:textSize="20sp" />
@@ -93,7 +92,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvLastName"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:background="#EBEBEB"
         android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
         android:hint="e.g. Smith"
@@ -106,7 +105,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/edtLastName"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:text="Date of birth:"
         android:textColor="#000"
         android:textSize="20sp" />
@@ -117,7 +116,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvDateOfBirth"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:background="#EBEBEB"
         android:hint="e.g. 01-01-2000"
         android:inputType="date"
@@ -125,12 +124,26 @@
         android:textColor="#646464" />
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnCheckBooking"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/edtDateOfBirthField"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#6EAF64"
+        android:onClick="runActivity2"
+        android:padding="15dp"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnCheckBooking"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="5dp"
         android:backgroundTint="#6EAF64"
         android:onClick="runActivity2"
         android:padding="15dp"
