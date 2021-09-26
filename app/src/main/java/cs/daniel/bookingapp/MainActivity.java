@@ -7,10 +7,16 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.sql.SQLOutput;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
     final String SUMMARY_FILE = "summary_file.txt";
@@ -45,13 +51,19 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void runActivity2 (View view){
+    public void runActivity2 (View view) throws IOException {
         edtLicenceNumber = findViewById(R.id.edtLicenceNumber);
         edtLicenceVersion = findViewById(R.id.edtLicenceVersion);
         edtLastName = findViewById(R.id.edtLastName);
         edtDateOfBirthField = findViewById(R.id.edtDateOfBirthField);
 
         saveFile(view);
+
+        FileInputStream fis1;
+
+        fis1 = openFileInput(SUMMARY_FILE);
+        BufferedReader user = new BufferedReader(new InputStreamReader(fis1));
+        String licenceNumber = user.readLine();
 
         if (TextUtils.isEmpty(edtLicenceNumber.getText()) || (edtLicenceNumber.length() != 8))
             edtLicenceNumber.setError("Please type a valid licence number.");
@@ -64,6 +76,12 @@ public class MainActivity extends AppCompatActivity {
 
         else if (TextUtils.isEmpty(edtDateOfBirthField.getText()) || (edtDateOfBirthField.length() != 10))
             edtDateOfBirthField.setError("Please type a valid date of birth in (DD-MM-YYYY).");
+
+        else if (edtLicenceNumber.getText().toString().toUpperCase().equals(licenceNumber)) {
+            Intent intent;
+            intent = new Intent(this, MainActivity3.class);
+            startActivity(intent);
+        }
 
         else {
             Intent intent;

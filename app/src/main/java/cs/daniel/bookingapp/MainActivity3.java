@@ -52,11 +52,11 @@ public class MainActivity3 extends AppCompatActivity {
             tvMain3AvailableTime2.setText(availableTime);
 
         } catch(FileNotFoundException e){
-            Toast.makeText(this, SUMMARY_FILE +" unable to open ",
+            Toast.makeText(this, SUMMARY_FILE + " unable to open.",
                     Toast.LENGTH_LONG).show();
 
         } catch(IOException e){
-            Toast.makeText(this, SUMMARY_FILE +" unable to read file ",
+            Toast.makeText(this, SUMMARY_FILE + " unable to read file.",
                     Toast.LENGTH_LONG).show();
         }
     }
