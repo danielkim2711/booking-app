@@ -88,4 +88,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
+
+    public void getTimeslotBooking(View view) {
+    }
 }

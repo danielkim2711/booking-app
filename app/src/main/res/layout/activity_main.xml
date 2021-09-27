@@ -124,7 +124,7 @@
         android:textColor="#646464" />
 
     <Button
-        android:id="@+id/btnCheckBooking"
+        android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/edtDateOfBirthField"
@@ -138,16 +138,16 @@
         android:textSize="20sp" />
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnCheckBooking"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnCheckBooking"
+        android:layout_below="@+id/btnLogin"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="5dp"
         android:backgroundTint="#6EAF64"
-        android:onClick="runActivity2"
+        android:onClick="getTimeslotBooking"
         android:padding="15dp"
-        android:text="Login"
+        android:text="Check Booking"
         android:textAllCaps="false"
         android:textSize="20sp" />
 

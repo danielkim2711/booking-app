@@ -81,13 +81,13 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
             case R.id.timeSlot1:
                 tvTime1 = findViewById(R.id.tvTime1);
                 rl1.setBackgroundColor(Color.parseColor("#f5f5f5"));
-                rl2.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl3.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl4.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl5.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl6.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl7.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl8.setBackgroundColor(Color.parseColor("#EBEBEB"));
+                rl2.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl3.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl4.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl5.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl6.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl7.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl8.setBackgroundColor(Color.parseColor("#00ff2a"));
                 try {
                     fos = openFileOutput(BOOKING_FILE, MODE_PRIVATE);
                     String time1 = tvTime1.getText().toString() + "\n";
@@ -104,14 +104,14 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.timeSlot2:
                 tvTime2 = findViewById(R.id.tvTime2);
-                rl1.setBackgroundColor(Color.parseColor("#EBEBEB"));
+                rl1.setBackgroundColor(Color.parseColor("#00ff2a"));
                 rl2.setBackgroundColor(Color.parseColor("#f5f5f5"));
-                rl3.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl4.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl5.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl6.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl7.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl8.setBackgroundColor(Color.parseColor("#EBEBEB"));
+                rl3.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl4.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl5.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl6.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl7.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl8.setBackgroundColor(Color.parseColor("#00ff2a"));
                 try {
                     fos = openFileOutput(BOOKING_FILE, MODE_PRIVATE);
                     String time2 = tvTime2.getText().toString() + "\n";
@@ -127,14 +127,14 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.timeSlot3:
                 tvTime3 = findViewById(R.id.tvTime3);
-                rl1.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl2.setBackgroundColor(Color.parseColor("#EBEBEB"));
+                rl1.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl2.setBackgroundColor(Color.parseColor("#00ff2a"));
                 rl3.setBackgroundColor(Color.parseColor("#f5f5f5"));
-                rl4.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl5.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl6.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl7.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl8.setBackgroundColor(Color.parseColor("#EBEBEB"));
+                rl4.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl5.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl6.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl7.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl8.setBackgroundColor(Color.parseColor("#00ff2a"));
                 try {
                     fos = openFileOutput(BOOKING_FILE, MODE_PRIVATE);
                     String time3 = tvTime3.getText().toString() + "\n";
@@ -150,14 +150,14 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.timeSlot4:
                 tvTime4 = findViewById(R.id.tvTime4);
-                rl1.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl2.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl3.setBackgroundColor(Color.parseColor("#EBEBEB"));
+                rl1.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl2.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl3.setBackgroundColor(Color.parseColor("#00ff2a"));
                 rl4.setBackgroundColor(Color.parseColor("#f5f5f5"));
-                rl5.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl6.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl7.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl8.setBackgroundColor(Color.parseColor("#EBEBEB"));
+                rl5.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl6.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl7.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl8.setBackgroundColor(Color.parseColor("#00ff2a"));
                 try {
                     fos = openFileOutput(BOOKING_FILE, MODE_PRIVATE);
                     String time4 = tvTime4.getText().toString() + "\n";
@@ -173,14 +173,14 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.timeSlot5:
                 tvTime5 = findViewById(R.id.tvTime5);
-                rl1.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl2.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl3.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl4.setBackgroundColor(Color.parseColor("#EBEBEB"));
+                rl1.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl2.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl3.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl4.setBackgroundColor(Color.parseColor("#00ff2a"));
                 rl5.setBackgroundColor(Color.parseColor("#f5f5f5"));
-                rl6.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl7.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl8.setBackgroundColor(Color.parseColor("#EBEBEB"));
+                rl6.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl7.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl8.setBackgroundColor(Color.parseColor("#00ff2a"));
                 try {
                     fos = openFileOutput(BOOKING_FILE, MODE_PRIVATE);
                     String time5 = tvTime5.getText().toString() + "\n";
@@ -196,14 +196,14 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.timeSlot6:
                 tvTime6 = findViewById(R.id.tvTime6);
-                rl1.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl2.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl3.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl4.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl5.setBackgroundColor(Color.parseColor("#EBEBEB"));
+                rl1.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl2.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl3.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl4.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl5.setBackgroundColor(Color.parseColor("#00ff2a"));
                 rl6.setBackgroundColor(Color.parseColor("#f5f5f5"));
-                rl7.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl8.setBackgroundColor(Color.parseColor("#EBEBEB"));
+                rl7.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl8.setBackgroundColor(Color.parseColor("#00ff2a"));
                 try {
                     fos = openFileOutput(BOOKING_FILE, MODE_PRIVATE);
                     String time6 = tvTime6.getText().toString() + "\n";
@@ -219,14 +219,14 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.timeSlot7:
                 tvTime7 = findViewById(R.id.tvTime7);
-                rl1.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl2.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl3.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl4.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl5.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl6.setBackgroundColor(Color.parseColor("#EBEBEB"));
+                rl1.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl2.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl3.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl4.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl5.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl6.setBackgroundColor(Color.parseColor("#00ff2a"));
                 rl7.setBackgroundColor(Color.parseColor("#f5f5f5"));
-                rl8.setBackgroundColor(Color.parseColor("#EBEBEB"));
+                rl8.setBackgroundColor(Color.parseColor("#00ff2a"));
                 try {
                     fos = openFileOutput(BOOKING_FILE, MODE_PRIVATE);
                     String time7 = tvTime7.getText().toString() + "\n";
@@ -242,13 +242,13 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
                 break;
             default:
                 tvTime8 = findViewById(R.id.tvTime8);
-                rl1.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl2.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl3.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl4.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl5.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl6.setBackgroundColor(Color.parseColor("#EBEBEB"));
-                rl7.setBackgroundColor(Color.parseColor("#EBEBEB"));
+                rl1.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl2.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl3.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl4.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl5.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl6.setBackgroundColor(Color.parseColor("#00ff2a"));
+                rl7.setBackgroundColor(Color.parseColor("#00ff2a"));
                 rl8.setBackgroundColor(Color.parseColor("#f5f5f5"));
                 try {
                     fos = openFileOutput(BOOKING_FILE, MODE_PRIVATE);
