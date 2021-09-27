@@ -147,7 +147,7 @@
         android:backgroundTint="#6EAF64"
         android:onClick="getTimeslotBooking"
         android:padding="15dp"
-        android:text="Check Booking"
+        android:text="Check My Booking"
         android:textAllCaps="false"
         android:textSize="20sp" />
 

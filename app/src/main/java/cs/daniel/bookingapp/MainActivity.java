@@ -22,13 +22,14 @@ public class MainActivity extends AppCompatActivity {
     final String SUMMARY_FILE = "summary_file.txt";
 
     private EditText edtLicenceNumber, edtLicenceVersion, edtLastName, edtDateOfBirthField;
-
+    private FileInputStream fis1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        edtLicenceNumber = findViewById(R.id.edtLicenceNumber);
     }
 
     private void saveFile (View view){
@@ -52,12 +53,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void runActivity2 (View view) throws IOException {
-        edtLicenceNumber = findViewById(R.id.edtLicenceNumber);
         edtLicenceVersion = findViewById(R.id.edtLicenceVersion);
         edtLastName = findViewById(R.id.edtLastName);
         edtDateOfBirthField = findViewById(R.id.edtDateOfBirthField);
-
-        FileInputStream fis1;
 
         fis1 = openFileInput(SUMMARY_FILE);
         BufferedReader user = new BufferedReader(new InputStreamReader(fis1));
@@ -76,9 +74,7 @@ public class MainActivity extends AppCompatActivity {
             edtDateOfBirthField.setError("Please type a valid date of birth in (DD-MM-YYYY).");
 
         else if (edtLicenceNumber.getText().toString().toUpperCase().equals(licenceNumber)) {
-            Intent intent;
-            intent = new Intent(this, MainActivity4.class);
-            startActivity(intent);
+            Toast.makeText(this, "Sorry, you are already booked.", Toast.LENGTH_LONG).show();
         }
 
         else {
@@ -89,6 +85,23 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void getTimeslotBooking(View view) {
+    public void getTimeslotBooking(View view) throws IOException {
+        fis1 = openFileInput(SUMMARY_FILE);
+        BufferedReader user = new BufferedReader(new InputStreamReader(fis1));
+        String licenceNumber = user.readLine();
+
+        if (TextUtils.isEmpty(edtLicenceNumber.getText()) || (edtLicenceNumber.length() != 8))
+            edtLicenceNumber.setError("Please type your licence number to see your booking.");
+
+        else if (edtLicenceNumber.getText().toString().toUpperCase().equals(licenceNumber)) {
+            Intent intent;
+            intent = new Intent(this, MainActivity4.class);
+            startActivity(intent);
+        }
+
+        else {
+            Toast.makeText(this, "Sorry, we couldn't find any booking for this licence number.",
+                    Toast.LENGTH_LONG).show();
+        }
     }
 }
