@@ -39,6 +39,8 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
 
         setRelativeLayout();
 
+        /* Create an onClickListener for timeslot */
+
         btnDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,6 +48,8 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
             }
         });
     }
+
+    /* Set an onClickListener for relativeLayouts */
 
     private void setRelativeLayout() {
         rl1 = (RelativeLayout) findViewById(R.id.timeSlot1);
@@ -72,6 +76,8 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         rl8 = (RelativeLayout) findViewById(R.id.timeSlot8);
         rl8.setOnClickListener(this);
     }
+
+    /* When clicked, save selected date and time into a text file and colour coding for timeslots */
 
     @Override
     public void onClick(View view) {
@@ -265,6 +271,8 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         }
     }
 
+    /* Show a data picker dialog for booking */
+
     private void showDatePickerDialog() {
         int year =  CALENDAR.get(Calendar.YEAR);
         int month = CALENDAR.get(Calendar.MONTH);
@@ -280,6 +288,9 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
 
         datePickerDialog.show();
     }
+
+    /* Based on selected date, show selected date and time to users.
+    * If weekends, disable */
 
     @Override
     public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth) {
@@ -316,6 +327,8 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
             rl8.setVisibility(View.VISIBLE);
         }
     }
+
+    /* Go to the summary page once the button clicked */
 
     public void runActivity3(View view) {
         Intent intent;
