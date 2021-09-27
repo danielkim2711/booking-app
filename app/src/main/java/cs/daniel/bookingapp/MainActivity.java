@@ -15,8 +15,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.sql.SQLOutput;
-import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
     final String SUMMARY_FILE = "summary_file.txt";
@@ -31,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
 
         edtLicenceNumber = findViewById(R.id.edtLicenceNumber);
     }
+
+    /* Save in a local storage for user data */
 
     private void saveFile (View view){
         FileOutputStream fos;
@@ -51,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
+    /* Check user input to continue for booking */
 
     public void runActivity2 (View view) throws IOException {
         edtLicenceVersion = findViewById(R.id.edtLicenceVersion);
@@ -84,6 +86,8 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
+
+    /* Check booking based on licence number */
 
     public void getTimeslotBooking(View view) throws IOException {
         fis1 = openFileInput(SUMMARY_FILE);
