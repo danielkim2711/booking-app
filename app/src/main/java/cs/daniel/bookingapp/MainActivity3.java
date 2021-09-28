@@ -34,6 +34,8 @@ public class MainActivity3 extends AppCompatActivity {
         FileInputStream fis1;
         FileInputStream fis2;
 
+        /* Read summary and booking file and show the summary to users */
+
         try {
             fis1 = openFileInput(SUMMARY_FILE);
             BufferedReader user = new BufferedReader(new InputStreamReader(fis1));
@@ -60,6 +62,8 @@ public class MainActivity3 extends AppCompatActivity {
                     Toast.LENGTH_LONG).show();
         }
     }
+
+    /* Go back to the landing page once the button clicked */
 
     public void runActivity1(View view) {
         Intent i = new Intent(this, MainActivity.class);
