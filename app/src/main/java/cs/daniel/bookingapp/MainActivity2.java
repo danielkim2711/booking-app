@@ -53,27 +53,21 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
 
     private void setRelativeLayout() {
         rl1 = (RelativeLayout) findViewById(R.id.timeSlot1);
-        rl1.setOnClickListener(this);
-
         rl2 = (RelativeLayout) findViewById(R.id.timeSlot2);
-        rl2.setOnClickListener(this);
-
         rl3 = (RelativeLayout) findViewById(R.id.timeSlot3);
-        rl3.setOnClickListener(this);
-
         rl4 = (RelativeLayout) findViewById(R.id.timeSlot4);
-        rl4.setOnClickListener(this);
-
         rl5 = (RelativeLayout) findViewById(R.id.timeSlot5);
-        rl5.setOnClickListener(this);
-
         rl6 = (RelativeLayout) findViewById(R.id.timeSlot6);
-        rl6.setOnClickListener(this);
-
         rl7 = (RelativeLayout) findViewById(R.id.timeSlot7);
-        rl7.setOnClickListener(this);
-
         rl8 = (RelativeLayout) findViewById(R.id.timeSlot8);
+
+        rl1.setOnClickListener(this);
+        rl2.setOnClickListener(this);
+        rl3.setOnClickListener(this);
+        rl4.setOnClickListener(this);
+        rl5.setOnClickListener(this);
+        rl6.setOnClickListener(this);
+        rl7.setOnClickListener(this);
         rl8.setOnClickListener(this);
     }
 
