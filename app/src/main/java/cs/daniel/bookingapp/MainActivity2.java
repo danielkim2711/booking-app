@@ -37,6 +37,9 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         tvDatePicker = findViewById(R.id.tvDatePicker);
         btnDate = findViewById(R.id.btnDate);
 
+        scrollView1 = (ScrollView)findViewById(R.id.scrollView1);
+        tvWarning = findViewById(R.id.tvWarning);
+
         setRelativeLayout();
 
         /* Create an onClickListener for timeslot */
@@ -288,9 +291,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth) {
-        scrollView1 = (ScrollView)findViewById(R.id.scrollView1);
         tvAvailable = findViewById(R.id.tvAvailable);
-        tvWarning = findViewById(R.id.tvWarning);
 
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("EEEE");
         Date date = new Date(year, month, dayOfMonth - 1);
@@ -300,6 +301,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         tvDatePicker.setText(selectedDate);
 
         if (dayOfTheWeek.equals("Saturday") || dayOfTheWeek.equals("Sunday")) {
+            tvWarning.setText("Please select weekdays.");
             tvWarning.setVisibility(View.VISIBLE);
             tvDatePicker.setVisibility(View.INVISIBLE);
             tvAvailable.setVisibility(View.INVISIBLE);
@@ -322,11 +324,17 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         }
     }
 
-    /* Go to the summary page once the button clicked */
+    /* Check if booking date is selected or not */
 
     public void runActivity3(View view) {
-        Intent intent;
-        intent = new Intent(this, MainActivity3.class);
-        startActivity(intent);
+        if (scrollView1.getVisibility() == View.VISIBLE) {
+            Intent intent;
+            intent = new Intent(this, MainActivity3.class);
+            startActivity(intent);
+        }
+        else {
+            tvWarning.setText("Please select date");
+            tvWarning.setVisibility(View.VISIBLE);
+        }
     }
 }
